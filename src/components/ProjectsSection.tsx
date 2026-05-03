@@ -48,7 +48,7 @@ const projects = [
     statusLabel: "✅ Live on Vercel",
     gradient: "linear-gradient(135deg, #7B2FFF, #EC4899)",
     github: "https://github.com/Smit-Bhatkar",
-    live: "https://pdf-rag-chatbot-9f2b6yn85-smit-s-projects-3891de47.vercel.app",
+    live: "https://pdf-rag-chatbot-rouge.vercel.app/",
   },
   {
     id: "event-management",
@@ -211,13 +211,12 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
           {/* Status badge */}
           <span
-            className={`status-badge ${
-              project.status === "dev"
+            className={`status-badge ${project.status === "dev"
                 ? "status-dev"
                 : project.status === "research"
-                ? "status-research"
-                : "status-live"
-            }`}
+                  ? "status-research"
+                  : "status-live"
+              }`}
             style={{ flexShrink: 0 }}
           >
             {project.statusLabel}
